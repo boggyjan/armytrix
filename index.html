@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1,user-scalable=0">
+  <meta name="language" content="en-us"/>
+  <meta name="distribution" content="Global"/>
+  <meta name="description" content="Following the Creed of Providing the Best Joy of Driving, Power and Versatility, ARMYTRIX offers the Best Performance Parts for Automotive. We ExciteYourLife"/>
+  <meta name="keywords" content="armytrix, exhaust, akrapovic, magnaflow, borla, supersprint,  remus, fiexhaust, ipe, milltek, цена, السعر, precio, preis, prix, обзор, مراجعة, &Uuml;berpr&uuml;fung, revisi&oacute;n, глушитель"/>
+
+  <meta property="og:site_name" content="Armytrix - Automotive Weaponized">
+  <meta property="og:url" content="https://www.armytrix.com/">
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="Armytrix - Automotive Weaponized">
+  <meta property="og:description" content='Following the Creed of Providing the Best Joy of Driving, Power and Versatility, ARMYTRIX offers the Best Performance Parts for Automotive. We ExciteYourLife'>
+  <meta property="og:image" content=""/>
+  <meta property="og:locale" content="en_US">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <meta http-equiv="imagetoolbar" content="false"/>
+  <META http-equiv="Pragma" content="no-cache">
+  <META http-equiv="Expires" content="-1">
+
+  <title>Armytrix - Automotive Weaponized</title>
+
+  <!--
+    Pleases do not require bootstrap in this page. It will override some css style.
+    The page use vue.js, and the js code is in 'js/index.js'
+  -->
+
+  <link rel="canonical" href="https://www.armytrix.com/"/>
+  <link rel="shortcut icon" href="https://www.armytrix.com/favicon.ico" type="image/x-icon"/>
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="https://www.armytrix.com/sitemap.xml"/>
+
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+  <div class="wrapper" id="index">
+    <h1 hidden>Armytrix</h1>
+
+    <div
+      class="header"
+      :style="`background: rgba(255, 255, 255, ${ headerBgOpacity })`">
+      <div
+        class="header-nav"
+        :class="{ active: navVisible }">
+        <img
+          @click="hideNav()"
+          src="images/close.svg"
+          alt="Close"
+          class="svg-icon img-btn">
+
+        <ul>
+          <li>
+            <a href="https://www.armytrix.com/product-exhaust">EXHAUST</a>
+          </li>
+          <li>
+            <a href="https://www.armytrix.com/shop">SHOP</a>
+          </li>
+          <li>
+            <a href="https://www.armytrix.com/sound">TECHNOLOGY</a>
+          </li>
+          <li>
+            <a href="https://www.armytrix.com/testimonial">TESTIMONIAL</a>
+          </li>
+          <li>
+            <a href="https://www.armytrix.com/homes/program">PROGRAM</a>
+          </li>
+          <li>
+            <a href="https://www.armytrix.com/dealer">DEALER</a>
+          </li>
+          <li>
+            <a href="https://www.armytrix.com/warranty_registration">Warranty Registration</a>
+          </li>
+          <li class="seperator"></li>
+          <li class="small">
+            <a href="https://www.youtube.com/user/armytrix?sub_confirmation=1">VIDEOS</a>
+          </li>
+          <li class="small">
+            <a href="https://www.armytrix.com/blog/">BLOG</a>
+          </li>
+          <li class="small">
+            <a href="https://www.armytrix.com/contact">CONTACT US</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="container">
+        <div class="header-row">
+          <div class="header-col left">
+            <img
+              @click="showNav()"
+              src="images/menu.svg"
+              alt="Menu"
+              class="svg-icon img-btn menu-btn">
+          </div>
+          <div class="header-col center">
+            <a href="https://www.armytrix.com">
+              <img src="images/logo.png" alt="Armytrix" class="img-btn logo">
+            </a>
+          </div>
+          <div class="header-col right">
+            <a href="https://www.armytrix.com/warranty_registration" class="mobile-hide">
+              Warranty Registration
+            </a>
+
+            <a href="https://www.armytrix.com/contact">
+              <img src="images/envelope.svg" alt="Contact Us" class="svg-icon img-btn mobile-hide contact-btn">
+            </a>
+
+            <img
+              @click.prevent.stop="toggleCart()"
+              src="images/cart.svg" alt="Cart"
+              class="svg-icon img-btn cart-btn">
+
+            <div
+              :class="{ active: cartVisible }"
+              ref="cart-popup"
+              class="cart-popup">
+              <div class="prod-list">
+                <div class="prod-item">
+                  <div class="thumb">
+                    <img src="https://www.armytrix.com/cdn/50_50_100_ff_cdn/product-shirt-logo-black/polo%E8%A1%A3%E6%9C%8D.jpg">
+                  </div>
+                  <div class="title">ARMYTRIX Logo Polo-Shirt</div>
+                  <div class="qty">x 1</div>
+                  <div class="price">USD $32.99</div>
+                </div>
+                <div class="prod-item">
+                  <div class="thumb">
+                    <img src="https://www.armytrix.com/cdn/50_50_100_ff_cdn/armytrix-shop/2-0.jpg">
+                  </div>
+                  <div class="title">ARMYTRIX LOGO Snapback</div>
+                  <div class="qty">x 1</div>
+                  <div class="price">USD $34.99</div>
+                </div>
+              </div>
+              <div class="subtotal">
+                <div class="title">
+                  Sub-Total
+                </div>
+                <div class="value">
+                  USD $67.98
+                </div>
+              </div>
+              <div class="total">
+                <div class="title">
+                  Total
+                </div>
+                <div class="value">
+                  USD $67.98
+                </div>
+              </div>
+              <div class="actions">
+                <a href="https://www.armytrix.com/cart" class="btn btn-s btn-sr">View Cart</a>
+                <a href="https://www.armytrix.com/check_out" class="btn btn-s btn-sr">Checkout</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="main">
+      <div class="top-carousel">
+        <!--
+          Because the page will not be render via vue server-side-render,
+          and I want to keep every element exitst before vue.js execute,
+          that's why I didn't use v-for to loop banners
+        -->
+        <!-- 這邊改成用json吧 -->
+        <div
+          v-if="topBannersVisible[0]"
+          :class="{ fadeout: currentTopBanner !== 0 }"
+          class="banner">
+          <video src="images/banners/1.mp4" muted loop autoplay></video>
+          <div class="container content">
+            <div class="title">ARMYTRIX COLLECTIONS 2021</div>
+            <div class="desc">Here is descriptions.</div>
+            <div class="actions">
+              <a href="#" class="btn discover-btn">Discover Now</a>
+              <!-- <a href="#" class="btn shop-btn">Shop Now</a> -->
+            </div>
+          </div>
+        </div>
+        <div
+          v-if="topBannersVisible[1]"
+          :class="{ fadeout: currentTopBanner !== 1 }"
+          class="banner">
+          <img src="images/banners/2.jpg">
+          <div class="container content">
+            <div class="actions">
+              <a href="#" class="btn shop-btn">Shop Now</a>
+            </div>
+          </div>
+        </div>
+        <div
+          v-if="topBannersVisible[2]"
+          :class="{ fadeout: currentTopBanner !== 2 }"
+          class="banner">
+          <video src="images/banners/3.mp4" muted loop autoplay></video>
+          <div class="container content">
+            <div class="actions">
+              <a href="#" class="btn discover-btn">Discover Now</a>
+            </div>
+          </div>
+        </div>
+        <div
+          v-if="topBannersVisible[3]"
+          :class="{ fadeout: currentTopBanner !== 3 }"
+          class="banner">
+          <img src="images/banners/4.jpg">
+          <div class="container content">
+            <div class="actions">
+              <a href="#" class="btn shop-btn">Shop Now</a>
+            </div>
+          </div>
+        </div>
+        <div
+          v-if="topBannersVisible[4]"
+          :class="{ fadeout: currentTopBanner !== 4 }"
+          class="banner">
+          <img src="images/banners/5.jpg">
+          <div class="container content">
+            <div class="actions">
+              <a href="#" class="btn discover-btn">Discover Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="page">
+          <button
+            @click="showTopBanner(0)"
+            :class="{ active: currentTopBanner === 0 }">
+            <span hidden>1</span>
+          </button>
+          <button
+            @click="showTopBanner(1)"
+            :class="{ active: currentTopBanner === 1 }">
+            <span hidden>2</span>
+          </button>
+          <button
+            @click="showTopBanner(2)"
+            :class="{ active: currentTopBanner === 2 }">
+            <span hidden>3</span>
+          </button>
+          <button
+            @click="showTopBanner(3)"
+            :class="{ active: currentTopBanner === 3 }">
+            <span hidden>4</span>
+          </button>
+          <button
+            @click="showTopBanner(4)"
+            :class="{ active: currentTopBanner === 4 }">
+            <span hidden>5</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="main-menu">
+      <div class="container">
+        <div class="menu">
+          <a href="https://www.armytrix.com/product-exhaust">Car Exhaust</a>
+          <a href="#">Car Coilovers</a>
+          <a href="#">Pricing</a>
+          <a href="https://www.armytrix.com/contact">Contact</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="news">
+      <div class="container">
+        <h2 class="center">NEWS & EVENTS</h2>
+
+        <div class="news-list">
+          <a href="#" class="news-item">
+            <div class="thumb">
+              <!-- all thumbs requires same ratio -->
+              <img src="images/banners/2.jpg" alt="Heading">
+            </div>
+            <div class="title">
+              Heading
+            </div>
+            <div class="desc">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. a quis ornare accumsan, blandit sed diam.
+            </div>
+          </a>
+          <a href="#" class="news-item">
+            <div class="thumb">
+              <img src="images/banners/4.jpg" alt="Heading">
+            </div>
+            <div class="title">
+              Heading
+            </div>
+            <div class="desc">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. a quis ornare accumsan, blandit sed diam.
+            </div>
+          </a>
+          <a href="#" class="news-item">
+            <div class="thumb">
+              <img src="images/banners/5.jpg" alt="Heading">
+            </div>
+            <div class="title">
+              Heading
+            </div>
+            <div class="desc">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. a quis ornare accumsan, blandit sed diam.
+            </div>
+          </a>
+        </div>
+        <div class="more center">
+          <a href="#" class="btn discover-btn">
+            DISCOVER MORE
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="big-banner right top">
+      <div class="rellax bg" data-rellax-speed="-5">
+        <img src="images/banners/2.jpg">
+      </div>
+      <div class="container content">
+        <div class="title">EXHAUST</div>
+        <div class="actions">
+          <a href="https://www.armytrix.com/product-exhaust" class="btn discover-btn">DISCOVER NOW</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="big-banner right bottom">
+      <div class="rellax bg" data-rellax-speed="-5">
+        <img src="images/banners/4.jpg">
+      </div>
+      <div class="container content">
+        <div class="title">SOUND KIT</div>
+        <div class="actions">
+          <a href="https://www.armytrix.com/product-exhaust" class="btn discover-btn">DISCOVER NOW</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="big-banner center bottom">
+      <div class="rellax bg" data-rellax-speed="-5">
+        <img src="images/banners/5.jpg">
+      </div>
+      <div class="container content">
+        <div class="actions">
+          <a href="https://www.armytrix.com/product-exhaust" class="btn shop-btn">SHOP NOW</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="big-banner yt-banner center bottom">
+      <img src="images/banners/2.jpg" class="bg">
+      <div class="container content">
+        <div class="actions">
+          <div class="title">STAY UP WITH US</div>
+          <a href="https://www.youtube.com/user/ARMYTRIX" class="btn subscribe-btn">
+            <img src="images/yt.svg" class="svg-icon" alt="YouTube">
+            Subscribe
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-menu">
+      <h2 class="center">WE EXCITE YOUR LIFE</h2>
+      <div class="container">
+        <div class="menu">
+          <a href="">ABOUT US</a>
+          <a href="">CONTACT</a>
+          <a href="">FIND A DEALAR</a>
+          <a href="">WARRANTY</a>
+          <a href="">COLLABORATE</a>
+          <a href="">SHOP</a>
+          <a href="">CUSTOM SUPPORT</a>
+          <a href="">FAQS</a>
+        </div>
+
+        <div class="menu">
+          <a href="https://www.facebook.com/ARMYTRIX" target="blank">
+            <img src="images/fb_o.svg" alt="Facebook">
+            Facebook
+          </a>
+          <a href="https://www.youtube.com/user/ARMYTRIX" target="blank">
+            <img src="images/yt_o.svg" alt="YouTube">
+            YouTube
+          </a>
+          <a href="https://www.instagram.com/armytrix_official/" target="blank">
+            <img src="images/ig_o.svg" alt="Instagram">
+            Instagram
+          </a>
+          <a href="#" target="blank">
+            <img src="images/app_o.svg" alt="Download APP">
+            Download APP
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="container">
+      <div class="footer-row">
+        <div class="footer-col left">
+          2021© ARMYTRIX CORPORATION
+        </div>
+        <div class="footer-col center">
+          <a href="https://www.armytrix.com">
+            <img src="images/logo.png" alt="Armytrix" class="img-btn logo">
+          </a>
+        </div>
+        <div class="footer-col right">
+          FOR U.S. ORDERS CALL 480-346-3875
+        </div>
+      </div>
+    </div>
+  </div>
+    
+  </div>
+
+  <script src="libs/rellax.min.js"></script>
+  <script src="libs/vue@2.6.14"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>
